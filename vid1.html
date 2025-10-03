@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>~</title>
+  <style>
+    body {
+      background-color: #2f2f2f;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .video-container {
+      max-width: 1280px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 28px; /* Bigger title */
+      margin-bottom: 12px;
+      text-align: left;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9; /* Keeps correct video ratio */
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      background: rgba(0,0,0,0);
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 20px; /* Smaller title on mobile */
+        text-align: center;
+      }
+      .video-container {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="video-container">
+    <h2>Dressing room spy</h2>
+    <div class="video-wrapper">
+      <iframe src="https://bunkr.fi/e/KoehdlUUmtQkF" id="video-iframe"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <div class="overlay" id="overlay"></div>
+    </div>
+  </div>
+
+  <script>
+    const overlay = document.getElementById('overlay');
+    let clickStep = 0;
+
+    overlay.addEventListener('click', function () {
+      clickStep++;
+
+      if (clickStep === 1) {
+        // First click → open YouTube
+        window.open('https://www.revenuecpmgate.com/atph16jrk?key=2ed36b3a73fcc6c035abf58e6e2d2001', '_blank');
+      } 
+      else if (clickStep === 2) {
+        // Second click → open Google + remove overlay so video can play
+        window.open('https://www.revenuecpmgate.com/k04wr7mfz7?key=efa21cf14b078963e6c2ec2814739d92', '_blank');
+        overlay.remove();
+      }
+    });
+  </script>
+</body>
+</html>
